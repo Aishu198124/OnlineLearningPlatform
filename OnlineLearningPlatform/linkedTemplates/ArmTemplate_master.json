@@ -37,7 +37,7 @@
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "AzureAD\\AishwaryaShreeH"
+			"defaultValue": "user"
 		},
 		"linkedServiceforstaging_sasUri": {
 			"type": "secureString",

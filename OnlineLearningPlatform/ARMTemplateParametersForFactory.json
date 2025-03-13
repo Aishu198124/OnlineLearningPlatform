@@ -27,7 +27,7 @@
 			"value": "OnlineLearningPortal"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
-			"value": "AzureAD\\AishwaryaShreeH"
+			"value": "user"
 		},
 		"linkedServiceforstaging_sasUri": {
 			"value": ""
