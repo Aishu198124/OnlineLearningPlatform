@@ -8,10 +8,10 @@
 			"server": "JM-DKT-023\\MSSQLSERVER01",
 			"database": "OnlineLearningPortal",
 			"encrypt": "optional",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "Windows",
 			"userName": "AzureAD\\AishwaryaShreeH",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlY2M0MDQ1ZC0yNmI3LTRkMGYtYTY2Ny00ZmQ1OWY1NTY5MDgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0OTY3NDBhNi1mMTQ1LTQ4MzEtOTdkYy0wYjVlN2Q0ZTY0YjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "MSSQL",
