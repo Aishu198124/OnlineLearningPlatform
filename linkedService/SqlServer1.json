@@ -1,0 +1,21 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "JM-DKT-023\\MSSQLSERVER01",
+			"database": "OnlineLearningPortal",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "Windows",
+			"userName": "AzureAD\\AishwaryaShreeH",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1NGEzODdjNy02YTJhLTRlMTYtYTBjMy02YzQwMTM0ZDc4MzkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "MSSQL",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
