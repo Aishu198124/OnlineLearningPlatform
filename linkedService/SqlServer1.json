@@ -11,7 +11,7 @@
 			"trustServerCertificate": true,
 			"authenticationType": "Windows",
 			"userName": "AzureAD\\AishwaryaShreeH",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0OTY3NDBhNi1mMTQ1LTQ4MzEtOTdkYy0wYjVlN2Q0ZTY0YjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhNDQ5Mzk1MS1lNWY4LTRiOGUtODExNi1lNmZjOGU4OGI5YzIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "MSSQL",
