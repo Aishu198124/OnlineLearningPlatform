@@ -29,7 +29,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "linkedServiceforstaging",
+							"referenceName": "BLOBLSforstaging",
 							"type": "LinkedServiceReference"
 						}
 					},
@@ -116,7 +116,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "linkedServiceforstaging",
+							"referenceName": "BLOBLSforstaging",
 							"type": "LinkedServiceReference"
 						}
 					},
@@ -203,7 +203,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "linkedServiceforstaging",
+							"referenceName": "BLOBLSforstaging",
 							"type": "LinkedServiceReference"
 						}
 					}
@@ -255,7 +255,7 @@
 					"enableStaging": true,
 					"stagingSettings": {
 						"linkedServiceName": {
-							"referenceName": "linkedServiceforstaging",
+							"referenceName": "BLOBLSforstaging",
 							"type": "LinkedServiceReference"
 						}
 					},

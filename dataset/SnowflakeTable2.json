@@ -24,7 +24,7 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "OG_DATA",
+			"schema": "RAW",
 			"table": "CUSTOMERS"
 		}
 	}
