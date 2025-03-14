@@ -5,8 +5,7 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"sasUri": "https://onlinelearningplatform.blob.core.windows.net/",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEJGRkU4QkU2LUNDREYtNEJCQi05QTg2LTAzRkNDMTQzNjZFN182MTY4YjFkOS0zY2Q4LTQyYmEtYjE1Mi1jNmRkNGExYzNkY2QiDQp9"
+			"sasUri": "https://onlinelearningplatform.blob.core.windows.net/?sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2025-03-14T15:20:38Z&st=2025-03-14T07:20:38Z&spr=https&sig=zVvtGl2qigNdj44E33g6wAB6F4qm0gwVA70S54p0I5M%3D?1234"
 		}
 	}
 }
