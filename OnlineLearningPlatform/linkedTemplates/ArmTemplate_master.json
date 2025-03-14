@@ -43,6 +43,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'linkedServiceforstaging'"
 		},
+		"BLOBLSforstaging_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'BLOBLSforstaging'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -87,6 +91,9 @@
 					},
 					"linkedServiceforstaging_sasUri": {
 						"value": "[parameters('linkedServiceforstaging_sasUri')]"
+					},
+					"BLOBLSforstaging_sasUri": {
+						"value": "[parameters('BLOBLSforstaging_sasUri')]"
 					},
 					"SqlServer1_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"

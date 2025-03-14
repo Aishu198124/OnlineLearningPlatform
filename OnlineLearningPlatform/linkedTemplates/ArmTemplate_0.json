@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'linkedServiceforstaging'"
 		},
+		"BLOBLSforstaging_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'BLOBLSforstaging'"
+		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "JM-DKT-023\\MSSQLSERVER01"
@@ -95,6 +99,19 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/BLOBLSforstaging')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "[parameters('BLOBLSforstaging_sasUri')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SnowflakeTable1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -122,40 +139,12 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "OG_DATA",
+					"schema": "RAW",
 					"table": "COUNTRY_REGION"
 				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Snowflake1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('SqlServer1_properties_typeProperties_server')]",
-					"database": "[parameters('SqlServer1_properties_typeProperties_database')]",
-					"encrypt": "optional",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('SqlServer1_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SqlServer1_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "MSSQL",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/MSSQL')]"
 			]
 		},
 		{
@@ -186,7 +175,7 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "OG_DATA",
+					"schema": "RAW",
 					"table": "CUSTOMERS"
 				}
 			},
@@ -222,7 +211,7 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "OG_DATA",
+					"schema": "RAW",
 					"table": "PRODUCTS"
 				}
 			},
@@ -320,12 +309,40 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "OG_DATA",
+					"schema": "RAW",
 					"table": "TRANSACTIONS"
 				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Snowflake1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer1_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer1_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": true,
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer1_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer1_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "MSSQL",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/MSSQL')]"
 			]
 		},
 		{
@@ -560,7 +577,7 @@
 							"enableStaging": true,
 							"stagingSettings": {
 								"linkedServiceName": {
-									"referenceName": "linkedServiceforstaging",
+									"referenceName": "BLOBLSforstaging",
 									"type": "LinkedServiceReference"
 								}
 							},
@@ -649,7 +666,7 @@
 							"enableStaging": true,
 							"stagingSettings": {
 								"linkedServiceName": {
-									"referenceName": "linkedServiceforstaging",
+									"referenceName": "BLOBLSforstaging",
 									"type": "LinkedServiceReference"
 								}
 							},
@@ -738,7 +755,7 @@
 							"enableStaging": true,
 							"stagingSettings": {
 								"linkedServiceName": {
-									"referenceName": "linkedServiceforstaging",
+									"referenceName": "BLOBLSforstaging",
 									"type": "LinkedServiceReference"
 								}
 							}
@@ -792,7 +809,7 @@
 							"enableStaging": true,
 							"stagingSettings": {
 								"linkedServiceName": {
-									"referenceName": "linkedServiceforstaging",
+									"referenceName": "BLOBLSforstaging",
 									"type": "LinkedServiceReference"
 								}
 							},
@@ -1007,7 +1024,7 @@
 				"[concat(variables('factoryId'), '/datasets/SnowflakeTable3')]",
 				"[concat(variables('factoryId'), '/datasets/SqlServerTable4')]",
 				"[concat(variables('factoryId'), '/datasets/SnowflakeTable4')]",
-				"[concat(variables('factoryId'), '/linkedServices/linkedServiceforstaging')]"
+				"[concat(variables('factoryId'), '/linkedServices/BLOBLSforstaging')]"
 			]
 		}
 	]

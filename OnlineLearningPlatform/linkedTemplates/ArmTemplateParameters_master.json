@@ -32,6 +32,9 @@
 		"linkedServiceforstaging_sasUri": {
 			"value": ""
 		},
+		"BLOBLSforstaging_sasUri": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
